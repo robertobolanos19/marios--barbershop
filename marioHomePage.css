@@ -1,0 +1,560 @@
+* {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-container{
+    margin: 0;
+}
+
+nav {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+}
+nav .mainMenu li a:hover {
+    background: rgb(255,94,0);
+}
+nav .openMenu {
+    font-size: 2rem;
+    margin-top: 2%;
+    margin-left: 65%;
+    display: none;
+    cursor: pointer;
+}
+nav .mainMenu .closeMenu , .mobile-icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.fa-facebook:hover {color: rgb(0, 110, 255);}
+.fa-instagram:hover {color: rgb(255, 0, 191);}
+
+nav .topNavLogo {
+    margin: 6px;
+    margin-left: 2%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#hidden-about {
+    width: 2%;
+    height: 2%;
+    position: absolute;
+    top: 78%;
+    z-index: 108;
+}
+
+#hidden-services {
+    width: 2%;
+    height: 2%;
+    position: absolute;
+    top: 132%;
+    z-index: 110;
+}
+
+#hidden-home {
+    display: none;
+}
+
+#first-section {
+    width: 100%;
+    height: 85vh;
+    margin: 0;
+    padding: 0;
+}
+
+#carousel-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 5% 0 0 0;
+}
+
+
+
+#carousel-container #left-carousel-container {
+    display: block;
+}
+
+#carousel-container #left-carousel-container {
+    margin-left: 0;
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+#carousel-container #left-carousel-container > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#carousel-container  #left-carousel-container h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+
+#carousel-container .left-images {
+    width: 70%;
+    height: auto;
+    border: 6px black solid;
+}
+
+
+#right-carousel-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: brown;
+}
+
+
+#carousel-container #right-carousel-container {
+    display: block;
+ }
+ 
+ #carousel-container #right-carousel-container {
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 35%;
+     width: 64%;
+     transition: transform .5s ease-in-out;
+     text-decoration: none;
+     color: white;
+ }
+ 
+ #carousel-container #right-carousel-container > .images{
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+     height: 100%;
+     width: 100%;
+     border: 6px black solid;
+    
+ }
+ 
+ #carousel-container #right-carousel-container > :hover {
+     color: gray;
+     text-decoration: underline;
+ }
+ 
+ #carousel-container #blur {
+     filter: brightness(65%);
+ }
+ 
+
+
+#second-section {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#about-container {
+    width: 65%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+
+#third-section {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#services-logo-container {
+    width: 25%;
+    height: auto;
+}
+
+#fourth-section {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#haircuts-container {
+    width: 75%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: left;
+}
+
+#haircuts-container #left-haircuts {
+    width: 100%;
+    height: 100%;
+}
+
+
+#haircuts-container #right-haircuts {
+    width: 100%;
+    height: 100%;
+}
+
+#fifth-section {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+
+
+/* Mobile phones (portrait and landscape) ---------- */
+@media only screen and (max-width: 600px) {
+
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+    }
+   
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+        text-align:center;
+   }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: -142px;
+    }
+    nav .openMenu {
+        display: block;
+
+        margin-left: 50%;
+    }
+
+    nav .mainMenu li a:hover {
+        background: none;
+        color: rgb(255, 123, 0);
+        font-size: 1.6rem;
+    }
+    .mobile-icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+
+    nav .topNavLogo {
+
+    margin-left: 10%;
+    }
+
+    #hidden-about {
+        width: 2%;
+        height: 2%;
+        position: absolute;
+        top: 5%;
+        z-index: 110;
+    }
+
+    #hidden-services {
+        width: 2%;
+        height: 2%;
+        position: absolute;
+        top: 96%;
+        z-index: 110;
+    }
+
+    #hidden-home {
+        display: block;
+        width: 2%;
+        height: 2%;
+        position: absolute;
+        top: 0;
+        z-index: 110;
+    }
+
+    #first-section {
+        width: 100%;
+        height: auto;
+    }
+
+    #carousel-container {
+        width: 100%;
+        height: 40vh;
+        margin: auto;
+        margin-top: 18%;
+        right: 17%;
+        padding: 4% 0 0 0;
+        display: grid;
+        grid-template-rows: auto;
+        
+    }    
+
+    #left-carousel-container {
+        display: none;
+    }
+
+    #left-carousel-container .left-images {
+        display: none;
+    }
+
+    #right-carousel-container {
+        width: 85%;
+        height: 100%;
+        margin: auto;
+        background-color: brown;
+    }
+
+
+    #about-container {
+        width: 80%;
+        padding-bottom: 3%;
+    }
+
+    #about-container h3 {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5% 0 5% 0;
+        text-transform: uppercase;
+    }
+
+    #services-logo-container {
+        width: 100%;
+        margin: auto;
+    }
+
+    #haircuts-container {
+        width: 80%;
+        margin-left: 10%;
+        padding-bottom: 10%;
+       
+        display: block;
+        text-align: left;
+    }
+
+    #haircuts-container h4 {
+        font-size: 18px;
+        padding-bottom: 3%;
+    }
+
+    #haircuts-container p {
+        padding-bottom: 5%;
+    }
+    
+    #contact-info h2 {
+        font-size: 18px;
+        padding-bottom: 3%;
+        padding-top: 10%;
+    }
+
+    #contact-info h3 {
+        font-size: 16px;
+        padding-bottom: 3%;
+    }
+
+    #contact-info p {
+        font-size: 16;
+        padding-bottom: 15%;
+    }
+
+  }
+
+/* Tablets and iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 600px) and (max-width: 1023px){
+
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+    }
+    
+    #carousel-container {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-top: 10%;
+        padding: 0;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
+    #left-carousel-container {
+        width: 50%;
+        height: 75%;
+        margin: auto;
+        display: none;
+    }
+    
+    #right-carousel-container {
+        width: 85%;
+        height: 70%;
+        margin: auto;
+        background-color: brown;
+    }
+
+    #second-section {
+        width: 85%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        margin: auto;
+    }
+
+    #second-section h3 {
+        padding-bottom: 5%;
+    }
+    
+    #services-logo-container {
+        margin: auto;
+    }
+
+    #haircuts-container {
+        margin: auto;
+        grid-gap:100px;
+    }
+
+    #haircuts-container h4{
+        padding-top: 5%;
+        padding-bottom: 3%;
+    }
+    
+    #haircuts-container p {
+        padding-bottom: 10%;
+    }
+
+    #contact-info {
+       margin-top: 5%;
+       padding-top: 5%;
+       padding-bottom: 5%;
+    }
+
+    #contact-info h2{
+        padding-bottom: 1%;
+    }
+
+    #contact-info h3{
+        padding-bottom: 1%;
+    }
+
+   
+
+}
+
+/* Low resolution desktops and laptops ---------- */
+@media screen and (min-width: 1024px) {
+   
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+    }
+
+    #about-container h3 {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    #about-container p {
+        font-size: 18;
+    }
+
+    #services-logo-container {
+        margin: auto;
+    }
+
+    #services-logo {
+        margin: auto;
+    }
+
+    #fourth-section h4 {
+        padding-bottom: 4%;
+    }
+
+    #fourth-section p {
+        padding-bottom: 8%;
+    }
+
+    #haircuts-container {
+        margin: auto;
+        grid-gap: 10%;
+    }
+
+    #contact-info {
+        padding-top: 4%;
+        padding-bottom: 5%;
+    }
+
+    #contact-info h2{
+        padding-bottom: 1%;
+    }
+
+    #contact-info h3{
+        padding-bottom: 1%;
+    }
+}
+
+
+/* High resolution desktops and laptops ---------- */
+@media screen and (min-width: 1280px) {
+  
+}
